@@ -1,0 +1,38 @@
+.circle {
+    border-radius: 100%;
+    padding: 2rem;
+}
+.biggerfont {
+    font-size: 2rem;
+}
+.navbar {
+    height: 5rem;
+    width: 100%;
+}
+.navbar > ul > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar >ul > li > a {
+    height: 100%;
+}
+.icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centered-text {
+    text-align: center;
+}
