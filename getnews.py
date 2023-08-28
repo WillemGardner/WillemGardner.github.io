@@ -15,7 +15,7 @@ htmlpagetemplate = """
 <meta charset="utf-8">
 <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
 <title>WG Tech News</title>
-
+<meta name="description" content="Willem Gardner: Sample Webpage on GitHub">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/pico.min.css">
 <link rel="stylesheet" href="css/mystyles.css">
@@ -31,7 +31,7 @@ htmlpagetemplate = """
             <li><strong class="biggerfont">Willem Gardner</strong></li>
         </ul>
         <ul class="fix">
-            <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png"></a></li>
+            <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn Logo"></a></li>
         </ul>
     </nav>
     <aside class="hidden" id="dropdown">
@@ -53,13 +53,13 @@ htmlpagetemplate = """
 <footer class="container">
     <nav class="navbar">
         <ul>
-            <li><a href="https://github.com/WillemGardner" class="secondary icon"><img class="icon circle" style="background-color: black;padding: 2px;" src="images/github-mark/github-mark-white.svg"></a></li>
+            <li><a href="https://github.com/WillemGardner" class="secondary icon"><img class="icon circle" style="background-color: black;padding: 2px;" src="images/github-mark/github-mark-white.svg" alt="GitHub Logo"></a></li>
         </ul>
         <ul>
             <li><strong class="biggerfont">Willem Gardner</strong></li>
         </ul>
         <ul class="fix">
-            <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png"></a></li>
+            <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn Logo"></a></li>
         </ul>
     </nav>
 </footer>
@@ -94,7 +94,7 @@ for newsitem in news['articles']:
         </header>
         <div class="grid">
             <p>{description}</p>
-            <img src="{imageUrl}">
+            <img src="{imageUrl}" alt="Picture from {source}">
         </div>
         <footer>
             <a href="{url}" role="button">Source: {source}</a>
