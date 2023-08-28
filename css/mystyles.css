@@ -36,3 +36,6 @@
 .centered-text {
     text-align: center;
 }
+.fix {
+    aspect-ratio: 1/1;
+}

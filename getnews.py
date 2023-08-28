@@ -30,7 +30,7 @@ htmlpagetemplate = """
         <ul>
             <li><strong class="biggerfont">Willem Gardner</strong></li>
         </ul>
-        <ul>
+        <ul class="fix">
             <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png"></a></li>
         </ul>
     </nav>
@@ -58,7 +58,7 @@ htmlpagetemplate = """
         <ul>
             <li><strong class="biggerfont">Willem Gardner</strong></li>
         </ul>
-        <ul>
+        <ul class="fix">
             <li><a href="https://www.linkedin.com/in/willem-gardner-064160181/" class="secondary"><img class="icon" src="images/LinkedIn-Logos/LI-In-Bug.png"></a></li>
         </ul>
     </nav>
