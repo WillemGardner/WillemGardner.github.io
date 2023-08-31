@@ -73,7 +73,8 @@ print(f'total results:  {news["totalResults"]}')
 print('\n')
 pagecontent = ""
 for newsitem in news['articles']:
-    
+    if newsitem["title"] == None:
+        continue
     print(f'author: {newsitem["author"]}')
     print(f'title: {newsitem["title"]}')
     print(f'source: {newsitem["source"]}')
