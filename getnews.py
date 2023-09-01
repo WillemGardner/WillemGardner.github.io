@@ -25,7 +25,7 @@ htmlpagetemplate = """
 <header class="container">
     <nav class="navbar">
         <ul>
-            <li><a href="#" class="secondary icon" onclick="toggleDropdown()" style="font-size:x-large;">&#9776;</a></li>
+            <li><a href="#" class="outline icon" onclick="toggleDropdown()" role="button" style="font-size:x-large;">&#9776;</a></li>
         </ul>
         <ul>
             <li><strong class="biggerfont">Willem Gardner</strong></li>
