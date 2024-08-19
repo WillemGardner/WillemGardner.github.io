@@ -41,7 +41,7 @@ htmlpagetemplate = """
         </nav>
     </aside>
     <hgroup>
-        <h1>Jobs</h1>
+        <h1>Job Postings</h1>
         <h2>from <a href="https://news.ycombinator.com/">Hacker News</a></h2>
     </hgroup>
 </header>
