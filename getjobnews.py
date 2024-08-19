@@ -12,7 +12,7 @@ htmlpagetemplate = """
 <head>
 <meta charset="utf-8">
 <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
-<title>WG Tech News</title>
+<title>WG Job Postings</title>
 <meta name="description" content="Willem Gardner: Sample Webpage on GitHub">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/pico.min.css">
@@ -71,7 +71,7 @@ for item in jobnews:
     job = json.loads(req.get(f'https://hacker-news.firebaseio.com/v0/item/{item}.json').text)
     #print(f'{item}: title: {list(job.keys())}')
     title = job["title"]
-    date = datetime.datetime.fromtimestamp(job["time"])
+    date = datetime.datetime.fromtimestamp(job["time"]).date()
     print(type(date))
     print(date)
     text = job["text"] if ("text" in list(job.keys())) else ""
@@ -97,5 +97,5 @@ for item in jobnews:
 
 htmlfinal = htmlpagetemplate.format(pagecontent = pagecontent)
 
-with open('jobnews.html', 'w') as file:
+with open('jobpostings.html', 'w') as file:
     file.write(htmlfinal)
