@@ -72,8 +72,7 @@ for item in jobnews:
     #print(f'{item}: title: {list(job.keys())}')
     title = job["title"]
     date = datetime.datetime.fromtimestamp(job["time"]).date()
-    print(type(date))
-    print(date)
+    #print(date)
     text = job["text"] if ("text" in list(job.keys())) else ""
     url = job["url"] if ("url" in list(job.keys())) else ""
     #print(f'item: {item}, title: {job["title"]}, date: {date}, text: {text}, url: {url}')
