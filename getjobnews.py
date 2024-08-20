@@ -2,9 +2,9 @@ import requests as req
 import json
 import datetime
 
+#Hacker News API https://github.com/HackerNews/API
 
 jobnews = json.loads(req.get('https://hacker-news.firebaseio.com/v0/jobstories.json').text)
-#print(jobnews)
 
 htmlpagetemplate = """
 <!DOCTYPE html>
@@ -69,12 +69,10 @@ htmlpagetemplate = """
 pagecontent=""
 for item in jobnews:
     job = json.loads(req.get(f'https://hacker-news.firebaseio.com/v0/item/{item}.json').text)
-    #print(f'{item}: title: {list(job.keys())}')
     title = job["title"]
     date = datetime.datetime.fromtimestamp(job["time"]).date()
-    #print(date)
-    text = job["text"] if ("text" in list(job.keys())) else ""
-    url = job["url"] if ("url" in list(job.keys())) else ""
+    text = f'<p>{job["text"]}</p>' if ("text" in list(job.keys())) else ""
+    url = f'<a href="{job["url"]}" role="button">{job["url"]}</a>' if ("url" in list(job.keys())) else ""
     #print(f'item: {item}, title: {job["title"]}, date: {date}, text: {text}, url: {url}')
     article = """
     <article>
@@ -85,10 +83,10 @@ for item in jobnews:
             </hgroup>
         </header>
         <div>
-            <p>{text}</p>
+            {text}
         </div>
         <footer>
-            <a href="{url}" role="button">{url}</a>
+            {url}
         </footer>
     </article>
     """
