@@ -96,3 +96,5 @@ htmlfinal = htmlpagetemplate.format(pagecontent = pagecontent)
 
 with open('jobpostings.html', 'w') as file:
     file.write(htmlfinal)
+
+print("getjobnews.py completed")
